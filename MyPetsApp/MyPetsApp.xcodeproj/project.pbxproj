@@ -7,20 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C35752E2D40625300A11C2C /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 5C35752D2D40625300A11C2C /* Localizable.xcstrings */; };
+		5C3575302D4064A300A11C2C /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C35752F2D4064A300A11C2C /* Pet.swift */; };
+		5C3575322D40801100A11C2C /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3575312D40801100A11C2C /* MainScreenView.swift */; };
 		CEA77F642D3EAA8700A67818 /* MyPetsAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA77F632D3EAA8700A67818 /* MyPetsAppApp.swift */; };
 		CEA77F662D3EAA8700A67818 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA77F652D3EAA8700A67818 /* ContentView.swift */; };
 		CEA77F682D3EAA8800A67818 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEA77F672D3EAA8800A67818 /* Assets.xcassets */; };
 		CEA77F6B2D3EAA8800A67818 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEA77F6A2D3EAA8800A67818 /* Preview Assets.xcassets */; };
-		CEA77F942D3ED68C00A67818 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CEA77F932D3ED68C00A67818 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5C35752D2D40625300A11C2C /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		5C35752F2D4064A300A11C2C /* Pet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
+		5C3575312D40801100A11C2C /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
 		CEA77F602D3EAA8700A67818 /* MyPetsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPetsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEA77F632D3EAA8700A67818 /* MyPetsAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPetsAppApp.swift; sourceTree = "<group>"; };
 		CEA77F652D3EAA8700A67818 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CEA77F672D3EAA8800A67818 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEA77F6A2D3EAA8800A67818 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		CEA77F932D3ED68C00A67818 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,7 +41,7 @@
 		CEA77F572D3EAA8700A67818 = {
 			isa = PBXGroup;
 			children = (
-				CEA77F932D3ED68C00A67818 /* Localizable.strings */,
+				5C35752D2D40625300A11C2C /* Localizable.xcstrings */,
 				CEA77F622D3EAA8700A67818 /* MyPetsApp */,
 				CEA77F612D3EAA8700A67818 /* Products */,
 			);
@@ -58,6 +62,8 @@
 				CEA77F652D3EAA8700A67818 /* ContentView.swift */,
 				CEA77F672D3EAA8800A67818 /* Assets.xcassets */,
 				CEA77F692D3EAA8800A67818 /* Preview Content */,
+				5C35752F2D4064A300A11C2C /* Pet.swift */,
+				5C3575312D40801100A11C2C /* MainScreenView.swift */,
 			);
 			path = MyPetsApp;
 			sourceTree = "<group>";
@@ -130,8 +136,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEA77F6B2D3EAA8800A67818 /* Preview Assets.xcassets in Resources */,
-				CEA77F942D3ED68C00A67818 /* Localizable.strings in Resources */,
 				CEA77F682D3EAA8800A67818 /* Assets.xcassets in Resources */,
+				5C35752E2D40625300A11C2C /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,8 +148,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C3575302D4064A300A11C2C /* Pet.swift in Sources */,
 				CEA77F662D3EAA8700A67818 /* ContentView.swift in Sources */,
 				CEA77F642D3EAA8700A67818 /* MyPetsAppApp.swift in Sources */,
+				5C3575322D40801100A11C2C /* MainScreenView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
