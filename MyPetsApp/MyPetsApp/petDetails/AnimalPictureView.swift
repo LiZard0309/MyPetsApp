@@ -8,19 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct Pet {
-    var name: String
-    var animalType: String
-    var furColor: String
-    var animalBreed: String
-    var medicationNeeds: Bool
-    var lastVetCheckup: Date
-    var animalPicture: String
-    var petSound: String
-    
-}
-
-struct AnimalPicture: View  {
+struct AnimalPictureView: View  {
     var imageName: String
     
     var body: some View {
@@ -30,3 +18,9 @@ struct AnimalPicture: View  {
             .clipShape(Rectangle())
     }
 }
+
+/*struct AnimalPictureView_Previews: PreviewProvider {
+    static var previews: some View {
+        AnimalPictureView(imageName: <#T##String#>)
+    }
+}*/

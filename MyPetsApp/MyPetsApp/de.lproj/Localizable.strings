@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  MyPetsApp
+
+  Created by user on 22.01.25.
+  
+*/
+"MyPets" = "Meine Haustiere";
+"Start" = "Klicken, um zu starten";
+"AddPet" = "Weiteres Haustier hinzufügen";

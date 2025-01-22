@@ -8,8 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		5C35752E2D40625300A11C2C /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 5C35752D2D40625300A11C2C /* Localizable.xcstrings */; };
-		5C3575302D4064A300A11C2C /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C35752F2D4064A300A11C2C /* Pet.swift */; };
+		5C3575302D4064A300A11C2C /* AnimalPictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C35752F2D4064A300A11C2C /* AnimalPictureView.swift */; };
 		5C3575322D40801100A11C2C /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3575312D40801100A11C2C /* MainScreenView.swift */; };
+		CE73C4202D41573D0083A50F /* AddPetFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73C41F2D41573D0083A50F /* AddPetFormView.swift */; };
+		CE73C4312D415C9E0083A50F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE73C42F2D415C9E0083A50F /* Localizable.strings */; };
+		CE73C43D2D41610A0083A50F /* PetsModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE73C43B2D41610A0083A50F /* PetsModel.xcdatamodeld */; };
+		CE73C4402D416A960083A50F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE73C4422D416A960083A50F /* Localizable.strings */; };
 		CEA77F642D3EAA8700A67818 /* MyPetsAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA77F632D3EAA8700A67818 /* MyPetsAppApp.swift */; };
 		CEA77F662D3EAA8700A67818 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA77F652D3EAA8700A67818 /* ContentView.swift */; };
 		CEA77F682D3EAA8800A67818 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEA77F672D3EAA8800A67818 /* Assets.xcassets */; };
@@ -17,9 +21,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5C35752D2D40625300A11C2C /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
-		5C35752F2D4064A300A11C2C /* Pet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
+		5C35752D2D40625300A11C2C /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		5C35752F2D4064A300A11C2C /* AnimalPictureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalPictureView.swift; sourceTree = "<group>"; };
 		5C3575312D40801100A11C2C /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
+		CE73C41F2D41573D0083A50F /* AddPetFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPetFormView.swift; sourceTree = "<group>"; };
+		CE73C4302D415C9E0083A50F /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CE73C43C2D41610A0083A50F /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		CE73C4412D416A960083A50F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CEA77F602D3EAA8700A67818 /* MyPetsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPetsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEA77F632D3EAA8700A67818 /* MyPetsAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPetsAppApp.swift; sourceTree = "<group>"; };
 		CEA77F652D3EAA8700A67818 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -38,10 +46,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE73C4382D415F130083A50F /* data */ = {
+			isa = PBXGroup;
+			children = (
+				CE73C43B2D41610A0083A50F /* PetsModel.xcdatamodeld */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		CE73C4392D415F420083A50F /* petDetails */ = {
+			isa = PBXGroup;
+			children = (
+				5C35752F2D4064A300A11C2C /* AnimalPictureView.swift */,
+			);
+			path = petDetails;
+			sourceTree = "<group>";
+		};
+		CE73C43A2D415F630083A50F /* form */ = {
+			isa = PBXGroup;
+			children = (
+				CE73C41F2D41573D0083A50F /* AddPetFormView.swift */,
+			);
+			path = form;
+			sourceTree = "<group>";
+		};
 		CEA77F572D3EAA8700A67818 = {
 			isa = PBXGroup;
 			children = (
-				5C35752D2D40625300A11C2C /* Localizable.xcstrings */,
 				CEA77F622D3EAA8700A67818 /* MyPetsApp */,
 				CEA77F612D3EAA8700A67818 /* Products */,
 			);
@@ -58,12 +89,17 @@
 		CEA77F622D3EAA8700A67818 /* MyPetsApp */ = {
 			isa = PBXGroup;
 			children = (
+				CE73C43A2D415F630083A50F /* form */,
+				CE73C4392D415F420083A50F /* petDetails */,
+				CE73C4382D415F130083A50F /* data */,
+				CE73C42F2D415C9E0083A50F /* Localizable.strings */,
+				CE73C4422D416A960083A50F /* Localizable.strings */,
 				CEA77F632D3EAA8700A67818 /* MyPetsAppApp.swift */,
+				5C3575312D40801100A11C2C /* MainScreenView.swift */,
 				CEA77F652D3EAA8700A67818 /* ContentView.swift */,
 				CEA77F672D3EAA8800A67818 /* Assets.xcassets */,
 				CEA77F692D3EAA8800A67818 /* Preview Content */,
-				5C35752F2D4064A300A11C2C /* Pet.swift */,
-				5C3575312D40801100A11C2C /* MainScreenView.swift */,
+				5C35752D2D40625300A11C2C /* Localizable.xcstrings */,
 			);
 			path = MyPetsApp;
 			sourceTree = "<group>";
@@ -135,7 +171,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE73C4402D416A960083A50F /* Localizable.strings in Resources */,
 				CEA77F6B2D3EAA8800A67818 /* Preview Assets.xcassets in Resources */,
+				CE73C4312D415C9E0083A50F /* Localizable.strings in Resources */,
 				CEA77F682D3EAA8800A67818 /* Assets.xcassets in Resources */,
 				5C35752E2D40625300A11C2C /* Localizable.xcstrings in Resources */,
 			);
@@ -148,14 +186,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C3575302D4064A300A11C2C /* Pet.swift in Sources */,
+				CE73C4202D41573D0083A50F /* AddPetFormView.swift in Sources */,
+				5C3575302D4064A300A11C2C /* AnimalPictureView.swift in Sources */,
 				CEA77F662D3EAA8700A67818 /* ContentView.swift in Sources */,
 				CEA77F642D3EAA8700A67818 /* MyPetsAppApp.swift in Sources */,
 				5C3575322D40801100A11C2C /* MainScreenView.swift in Sources */,
+				CE73C43D2D41610A0083A50F /* PetsModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CE73C42F2D415C9E0083A50F /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE73C4302D415C9E0083A50F /* de */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		CE73C4422D416A960083A50F /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE73C4412D416A960083A50F /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		CEA77F6C2D3EAA8800A67818 /* Debug */ = {
@@ -350,6 +409,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CE73C43B2D41610A0083A50F /* PetsModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CE73C43C2D41610A0083A50F /* Model.xcdatamodel */,
+			);
+			currentVersion = CE73C43C2D41610A0083A50F /* Model.xcdatamodel */;
+			path = PetsModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = CEA77F582D3EAA8700A67818 /* Project object */;
 }
