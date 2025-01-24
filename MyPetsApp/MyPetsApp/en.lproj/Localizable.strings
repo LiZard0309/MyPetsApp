@@ -5,11 +5,31 @@
   Created by user on 22.01.25.
   
 */
+
+//CONTENTVIEW
 "MyPets" = "My Pets";
 "Start" = "Get started";
+
+//MAINSCREENVIEW
 "AddPet" = "Add another pet";
 "NoName" = "Name unknown";
 "NoKind" = "Animal kind unknown";
 "AddNew" = "Add pet";
 "Add" = "Add";
-"PetName" = "Pet name";
+"Vets" = "My vets";
+"NoNumber" = "No phone number available";
+"NoAddress" = "No address available";
+"NoPets" = "No pets added yet";
+"NoVets" = "No vets added yet";
+
+//ADDPETFORMVIEW
+"PetName" = "Name";
+"PetAge" = "Age";
+"PetKind" = "Animal kind";
+"Cat" = "Cat";
+"Dog" = "Dog";
+"Bunny" = "Bunny";
+"Bird" = "Budgie";
+"GuineaPig" = "Guinea Pig";
+"Turtle" = "Turtle";
+"Mouse" = "Mouse";

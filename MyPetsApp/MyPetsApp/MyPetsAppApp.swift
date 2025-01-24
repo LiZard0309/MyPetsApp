@@ -17,6 +17,10 @@ struct MyPetsAppApp: App {
         WindowGroup {
             ContentView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            
+                .onAppear{
+                    VetData.createInitialVetData(context: persistenceController.container.viewContext)
+                }
         }
     }
 }

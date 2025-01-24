@@ -13,6 +13,6 @@ struct AnimalDetailsView: View {
     }
 }
 
-#Preview {
+/*#Preview {
     AnimalDetailsView()
-}
+}*/

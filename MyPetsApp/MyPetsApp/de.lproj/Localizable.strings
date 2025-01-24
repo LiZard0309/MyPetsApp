@@ -5,11 +5,31 @@
   Created by user on 22.01.25.
   
 */
+
+//CONTENTVIEW
 "MyPets" = "Meine Haustiere";
 "Start" = "Klicken, um zu starten";
+
+//MAINSCREENVIEW
 "AddPet" = "Weiteres Haustier hinzufügen";
 "NoName" = "Name unbekannt";
 "NoKind" = "Tierart unbekannt";
 "AddNew" = "Tier hinzufügen";
 "Add" = "Hinzufügen";
-"PetName" = "Name des Haustiers";
+"Vets" = "Meine Tierärzt:innen";
+"NoNumber" = "Keine Telefonnummer vorhanden";
+"NoAddress" = "Keine Adresse vorhanden";
+"NoPets" = "Noch keine Haustiere hinzugefügt";
+"NoVets" = "Noch keine Tierärzt:innen hinzugefügt";
+
+//ADDPETFORMVIEW
+"PetName" = "Name";
+"PetAge" = "Alter";
+"PetKind" = "Tierart";
+"Cat" = "Katze";
+"Dog" = "Hund";
+"Bunny" = "Kaninchen";
+"Bird" = "Wellensittich";
+"GuineaPig" = "Meerschweinchen";
+"Turtle" = "Schildkröte";
+"Mouse" = "Maus";
