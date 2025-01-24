@@ -10,3 +10,6 @@
 "AddPet" = "Add another pet";
 "NoName" = "Name unknown";
 "NoKind" = "Animal kind unknown";
+"AddNew" = "Add pet";
+"Add" = "Add";
+"PetName" = "Pet name";

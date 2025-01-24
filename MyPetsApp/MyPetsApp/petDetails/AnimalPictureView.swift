@@ -10,26 +10,26 @@ import SwiftUI
 
 struct AnimalPictureView: View  {
     
-    let pet: Pet
+    var animalPicture: Data?
     
     var body: some View {
-        if let imageData = pet.animalPicture,
+        if let imageData = animalPicture,
            let uiImage = UIImage(data: imageData) {
             Image(uiImage: uiImage)
                 .resizable()
-                .frame(width: 50, height: 100)
+                .frame(width: 50, height: 50)
                 .clipShape(Circle())
         } else {
-            Image("PetOutline")
+            Image("PawPrint")
                 .resizable()
-                .frame(width: 50, height: 100)
+                .frame(width: 50, height: 50)
                 .clipShape(Circle())
         }
     }
 }
 
-struct AnimalPictureView_Previews: PreviewProvider {
+/*struct AnimalPictureView_Previews: PreviewProvider {
     static var previews: some View {
         AnimalPictureView(pet: <#T##Pet#>)
     }
-}
+}*/

@@ -10,3 +10,6 @@
 "AddPet" = "Weiteres Haustier hinzufügen";
 "NoName" = "Name unbekannt";
 "NoKind" = "Tierart unbekannt";
+"AddNew" = "Tier hinzufügen";
+"Add" = "Hinzufügen";
+"PetName" = "Name des Haustiers";

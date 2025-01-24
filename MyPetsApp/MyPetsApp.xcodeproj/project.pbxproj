@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		5C3575302D4064A300A11C2C /* AnimalPictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C35752F2D4064A300A11C2C /* AnimalPictureView.swift */; };
 		5C3575322D40801100A11C2C /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3575312D40801100A11C2C /* MainScreenView.swift */; };
+		5CF46F432D431121003C4708 /* AnimalListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF46F422D431121003C4708 /* AnimalListView.swift */; };
+		5CF46F452D43112A003C4708 /* AnimalDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF46F442D43112A003C4708 /* AnimalDetailsView.swift */; };
+		5CF46F482D43113E003C4708 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF46F462D43113E003C4708 /* PersistenceController.swift */; };
 		CE73C4202D41573D0083A50F /* AddPetFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73C41F2D41573D0083A50F /* AddPetFormView.swift */; };
 		CE73C4312D415C9E0083A50F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE73C42F2D415C9E0083A50F /* Localizable.strings */; };
 		CE73C43D2D41610A0083A50F /* PetsModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE73C43B2D41610A0083A50F /* PetsModel.xcdatamodeld */; };
@@ -22,6 +25,9 @@
 /* Begin PBXFileReference section */
 		5C35752F2D4064A300A11C2C /* AnimalPictureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalPictureView.swift; sourceTree = "<group>"; };
 		5C3575312D40801100A11C2C /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
+		5CF46F422D431121003C4708 /* AnimalListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalListView.swift; sourceTree = "<group>"; };
+		5CF46F442D43112A003C4708 /* AnimalDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalDetailsView.swift; sourceTree = "<group>"; };
+		5CF46F462D43113E003C4708 /* PersistenceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		CE73C41F2D41573D0083A50F /* AddPetFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPetFormView.swift; sourceTree = "<group>"; };
 		CE73C4302D415C9E0083A50F /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CE73C43C2D41610A0083A50F /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
@@ -47,6 +53,7 @@
 		CE73C4382D415F130083A50F /* data */ = {
 			isa = PBXGroup;
 			children = (
+				5CF46F462D43113E003C4708 /* PersistenceController.swift */,
 				CE73C43B2D41610A0083A50F /* PetsModel.xcdatamodeld */,
 			);
 			path = data;
@@ -55,6 +62,8 @@
 		CE73C4392D415F420083A50F /* petDetails */ = {
 			isa = PBXGroup;
 			children = (
+				5CF46F442D43112A003C4708 /* AnimalDetailsView.swift */,
+				5CF46F422D431121003C4708 /* AnimalListView.swift */,
 				5C35752F2D4064A300A11C2C /* AnimalPictureView.swift */,
 			);
 			path = petDetails;
@@ -182,10 +191,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CF46F482D43113E003C4708 /* PersistenceController.swift in Sources */,
+				5CF46F432D431121003C4708 /* AnimalListView.swift in Sources */,
 				CE73C4202D41573D0083A50F /* AddPetFormView.swift in Sources */,
 				5C3575302D4064A300A11C2C /* AnimalPictureView.swift in Sources */,
 				CEA77F662D3EAA8700A67818 /* ContentView.swift in Sources */,
 				CEA77F642D3EAA8700A67818 /* MyPetsAppApp.swift in Sources */,
+				5CF46F452D43112A003C4708 /* AnimalDetailsView.swift in Sources */,
 				5C3575322D40801100A11C2C /* MainScreenView.swift in Sources */,
 				CE73C43D2D41610A0083A50F /* PetsModel.xcdatamodeld in Sources */,
 			);

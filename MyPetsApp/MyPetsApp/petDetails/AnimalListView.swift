@@ -8,20 +8,23 @@
 import SwiftUI
 
 struct AnimalListView: View {
-    let pet: Pet
+    
+    var petName: String?
+    var animalKind: String?
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text(pet.name ?? NSLocalizedString("NoName", comment: ""))
+            Text(petName ?? NSLocalizedString("NoName", comment: ""))
                 .font(.system(size: 16, weight: .bold))
                 .foregroundStyle(.primary)
-            Text(pet.animalKind ?? NSLocalizedString("NoKind", comment: ""))
+            Text(animalKind ?? NSLocalizedString("NoKind", comment: ""))
                 .font(.system(size: 14))
                 .foregroundStyle(.secondary)
+            Divider()
         }
     }
 }
 
-#Preview {
+/*#Preview {
     AnimalListView(pet: <#T##Pet#>)
-}
+}*/

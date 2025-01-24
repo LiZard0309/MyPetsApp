@@ -17,38 +17,47 @@ struct MainScreenView: View {
     //updates List automatically and sorts it after pets' names
     
     
+    
     var body: some View {
         
         ZStack {
             Color("BackgroundColor")
                 .ignoresSafeArea()
-           
             
-                VStack {
-                    
-                    Text(NSLocalizedString("MyPets", comment: ""))
-                        .font(.largeTitle.bold()).foregroundColor(Color("TitleFontColor"))
-                    
-                    List(petsList, id: \.self){ pet in
-                            HStack {
-                                NavigationLink(destination: AnimalDetailsView()) {
-                                    AnimalPictureView(pet: pet)
-                                    AnimalListView(pet: pet)
-                                }
-                            }}
-                    }
-                                            
-                    NavigationLink(destination: AddPetFormView()){
-                        Text (NSLocalizedString("AddPet", comment: ""))
-                            .padding(20)
-                            .font(.system(size: 18, weight: .bold)).foregroundColor(Color("LinkColor"))
-                            
+            
+            VStack {
+                
+                Text(NSLocalizedString("MyPets", comment: ""))
+                    .font(.largeTitle.bold()).foregroundColor(Color("TitleFontColor"))
+                
+                List{
+                    ForEach(petsList) {pet in
+                        HStack {
+                            NavigationLink(destination: AnimalDetailsView()) {
+                                AnimalPictureView(animalPicture: pet.animalPicture)
+                                AnimalListView(petName: pet.name, animalKind: pet.animalKind)
+                            }
+                        }
                     }
                 }
                 
+                NavigationLink(destination: AddPetFormView()){
+                    Text (NSLocalizedString("AddPet", comment: ""))
+                        .padding()
+                        .font(.system(size: 18, weight: .bold)).foregroundColor(Color("BackgroundColor"))
+                        .frame(maxWidth: .infinity)
+                        .background(Color("LinkColor"))
+                        .cornerRadius(10)
+                        .shadow(radius: 5)
+                }
+                .padding(.horizontal, 30)
+                
+                
+            }
+            
         }
         
-    
+    }
 }
 
 #Preview {
