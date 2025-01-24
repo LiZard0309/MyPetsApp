@@ -6,13 +6,15 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct ContentView: View {
     @State private var scale = 1.0
     
     var body: some View {
-        NavigationView {
+        NavigationView(){
             ZStack {
+                
                 Image("Background")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
@@ -32,6 +34,7 @@ struct ContentView: View {
                                 .scaleEffect(scale)
                                 .animation(.linear(duration: 1), value: scale)
                         }
+                        
                     }
                 }
                 
@@ -43,7 +46,7 @@ struct ContentView: View {
             
             
         }
-        .navigationTitle("Start")
+        
     }
 }
 

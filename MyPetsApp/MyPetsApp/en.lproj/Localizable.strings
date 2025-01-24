@@ -8,3 +8,5 @@
 "MyPets" = "My Pets";
 "Start" = "Get started";
 "AddPet" = "Add another pet";
+"NoName" = "Name unknown";
+"NoKind" = "Animal kind unknown";
