@@ -61,6 +61,7 @@
 "Age" = "Age";
 "Years" = "%d years";
 "NoMeds" = "No medication";
+"IntakeTime" = "Medication intake time";
 "PlaySound" = "Play animal sound";
 "DeletePet" = "Delete pet data";
 "TestNotification" = "Test notification";
@@ -68,3 +69,4 @@
 "Yes" = "Yes, delete";
 "Cancel" = "Cancel";
 "ConfirmDelete" = "Do you really want to delete data?";
+"NoSoundAvailable" = "No sound available for this pet";

@@ -61,6 +61,7 @@
 "Age" = "Alter";
 "Years" = "%d Jahre";
 "NoMeds" = "Keine Medikamente";
+"IntakeTime" = "Einnahmezeit Medikamente";
 "PlaySound" = "Tiersound abspielen";
 "DeletePet" = "Haustier-Daten löschen";
 "TestNotification" = "Benachrichtigung testen";
@@ -68,3 +69,4 @@
 "Yes" = "Ja, löschen";
 "Cancel" = "Abbrechen";
 "ConfirmDelete" = "Wollen Sie die Daten wirklich löschen?";
+"NoSoundAvailable" = "Kein Sound für dieses Tier verfügbar";

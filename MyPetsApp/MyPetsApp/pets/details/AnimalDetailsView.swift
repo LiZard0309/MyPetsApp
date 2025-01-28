@@ -70,6 +70,11 @@ struct AnimalDetailsView: View {
                                 .font(.system(size: 16))
                         }
                         
+                        Section(header: Text(NSLocalizedString("IntakeTime", comment: ""))){
+                            Text(pet.medication?.intakeTime ?? NSLocalizedString("NoMeds", comment: ""))
+                                .font(.system(size: 16))
+                        }
+                        
                         Section(header: Text(NSLocalizedString("PlaySound", comment: ""))){
                             
                             if let soundPath = pet.animalSound, let soundURL = URL(string: soundPath), FileManager.default.fileExists(atPath: soundURL.path) {
@@ -87,7 +92,7 @@ struct AnimalDetailsView: View {
                                 .controlSize(.regular)
                                 
                             } else {
-                                Text("No sound available for this pet.")
+                                Text(NSLocalizedString("NoSoundAvailable", comment: ""))
                                     .foregroundColor(.gray)
                                     .padding(.top, 20)
                                 
