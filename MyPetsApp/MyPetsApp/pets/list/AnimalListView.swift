@@ -17,9 +17,11 @@ struct AnimalListView: View {
             Text(petName ?? NSLocalizedString("NoName", comment: ""))
                 .font(.system(size: 16, weight: .bold))
                 .foregroundStyle(.primary)
+                .foregroundColor(Color.black)
             Text(animalKind ?? NSLocalizedString("NoKind", comment: ""))
                 .font(.system(size: 14))
                 .foregroundStyle(.secondary)
+            .foregroundColor(Color.black)
             Divider()
         }
     }

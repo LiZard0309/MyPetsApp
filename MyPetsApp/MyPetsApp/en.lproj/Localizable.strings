@@ -7,7 +7,7 @@
 */
 
 //CONTENTVIEW
-"MyPets" = "My Pets";
+"MyPets" = "My pets";
 "Start" = "Get started";
 
 //MAINSCREENVIEW
@@ -21,11 +21,17 @@
 "NoAddress" = "No address available";
 "NoPets" = "No pets added yet";
 "NoVets" = "No vets added yet";
+"Overview" = "Overview";
 
 //ADDPETFORMVIEW
+"AnimalPhoto" = "Upload photo";
 "PetName" = "Name";
-"PetAge" = "Age";
+"PetAge" = "Age: %d years";
 "PetKind" = "Animal kind";
+"PetBreed" = "Breed";
+"PetVet" = "Vet";
+"CheckupTime" = "Next checkup";
+"MedNeed" = "Needs medication";
 "Cat" = "Cat";
 "Dog" = "Dog";
 "Bunny" = "Bunny";
@@ -33,3 +39,32 @@
 "GuineaPig" = "Guinea Pig";
 "Turtle" = "Turtle";
 "Mouse" = "Mouse";
+"Other" = "Other animal";
+"UnknownVet" = "Vet unknown";
+"Meds" = "Medications";
+"UnknownMeds" = "Medication unknown";
+"SoundRecorder" = "Record animal sound";
+"StartRecording" = "Start";
+"StopRecording" = "Stop";
+
+//MEDICATIONDATA
+"evening" = "evening";
+"morning" = "morning";
+
+//PETVIEWMODEL
+"EuropShorthair" = "European shorthair";
+"DwarfRabbit" = "Dwarf rabbit";
+
+//ANIMALDETAILSVIEW
+"AnimalDetails" = "Pet details";
+"NoBreed" = "Rasse unbekannt";
+"Age" = "Age";
+"Years" = "%d years";
+"NoMeds" = "No medication";
+"PlaySound" = "Play animal sound";
+"DeletePet" = "Delete pet data";
+"TestNotification" = "Test notification";
+"Delete" = "Delete pet data?";
+"Yes" = "Yes, delete";
+"Cancel" = "Cancel";
+"ConfirmDelete" = "Do you really want to delete data?";

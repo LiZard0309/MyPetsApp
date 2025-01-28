@@ -21,11 +21,17 @@
 "NoAddress" = "Keine Adresse vorhanden";
 "NoPets" = "Noch keine Haustiere hinzugefügt";
 "NoVets" = "Noch keine Tierärzt:innen hinzugefügt";
+"Overview" = "Überblick";
 
 //ADDPETFORMVIEW
+"AnimalPhoto" = "Foto hochladen";
 "PetName" = "Name";
-"PetAge" = "Alter";
+"PetAge" = "Alter: %d Jahre";
 "PetKind" = "Tierart";
+"PetBreed" = "Rasse";
+"PetVet" = "Tierärzt:in";
+"CheckupTime" = "Nächste Kontrolle";
+"MedNeed" = "Braucht Medikation";
 "Cat" = "Katze";
 "Dog" = "Hund";
 "Bunny" = "Kaninchen";
@@ -33,3 +39,32 @@
 "GuineaPig" = "Meerschweinchen";
 "Turtle" = "Schildkröte";
 "Mouse" = "Maus";
+"Other" = "Anderes Tier";
+"UnknownVet" = "Tierärzt:in unbekannt";
+"Meds" = "Medikamente";
+"UnknownMeds" = "Medikation unbekannt";
+"SoundRecorder" = "Tierlaut aufnehmen";
+"StartRecording" = "Starten";
+"StopRecording" = "Stoppen";
+
+//MEDICATIONDATA
+"evening" = "abends";
+"morning" = "morgens";
+
+//PETVIEWMODEL
+"EuropShorthair" = "Europäische Kurzhaarkatze";
+"DwarfRabbit" = "Zwergkaninchen";
+
+//ANIMALDETAILSVIEW
+"AnimalDetails" = "Detaillierte Tierinfo";
+"NoBreed" = "Rasse unbekannt";
+"Age" = "Alter";
+"Years" = "%d Jahre";
+"NoMeds" = "Keine Medikamente";
+"PlaySound" = "Tiersound abspielen";
+"DeletePet" = "Haustier-Daten löschen";
+"TestNotification" = "Benachrichtigung testen";
+"Delete" = "Haustier-Daten löschen?";
+"Yes" = "Ja, löschen";
+"Cancel" = "Abbrechen";
+"ConfirmDelete" = "Wollen Sie die Daten wirklich löschen?";

@@ -17,9 +17,13 @@ struct MyPetsAppApp: App {
         WindowGroup {
             ContentView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .environmentObject(PetViewModel(context: persistenceController.container.viewContext))
             
                 .onAppear{
                     VetData.createInitialVetData(context: persistenceController.container.viewContext)
+                    MedicationData.createInitialMedicationData(context: persistenceController.container.viewContext)
+                    let petViewModel = PetViewModel(context: persistenceController.container    .viewContext)
+                    petViewModel.preloadPets()
                 }
         }
     }

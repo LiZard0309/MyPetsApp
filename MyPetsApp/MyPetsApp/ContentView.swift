@@ -18,31 +18,35 @@ struct ContentView: View {
                 Image("Background")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
+                    .ignoresSafeArea()
                 
-                VStack(alignment: .trailing, spacing: 20){
+                VStack(alignment: .trailing, spacing: 10){
                     
                     Text(NSLocalizedString("MyPets", comment: ""))
                         .font(.largeTitle.bold())
+                        .multilineTextAlignment(.trailing)
                     
-                    HStack {
+                    
                         
                         NavigationLink(destination: MainScreenView()){
                             
                             Label (NSLocalizedString("Start", comment: ""), systemImage: "chevron.forward.2")
-                                .font(.system(size: 18, weight: .bold)).foregroundColor(.gray)
+                                .font(.system(size: 18, weight: .bold))
+                                .foregroundColor(.gray)
                                 .padding()
-                                .scaleEffect(scale)
-                                .animation(.linear(duration: 1), value: scale)
+                                
                         }
-                        
-                    }
+                        .scaleEffect(scale)
+                        .animation(.linear(duration: 2), value: scale)
+                    
                 }
                 
                 .offset(x: 0, y: -200)
-                .padding(30)
+                .padding(.trailing, -80)
+                
                 
             }
-            .ignoresSafeArea()
+            
             
             
         }

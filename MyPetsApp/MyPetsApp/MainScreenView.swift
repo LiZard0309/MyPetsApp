@@ -9,22 +9,19 @@ import SwiftUI
 
 struct MainScreenView: View {
     @Environment(\.managedObjectContext) var managedObjectContext
+    @EnvironmentObject var petViewModel: PetViewModel
     
-    //@State var petsList: [Pet] = []
-    
-    @FetchRequest(sortDescriptors: [SortDescriptor(\.name)]) var petsList: FetchedResults<Pet>
-    //updates List automatically and sorts it after pets' names
-    
+        
     @FetchRequest(sortDescriptors: [SortDescriptor(\.name)]) var vetsList: FetchedResults<Vet>
+    @FetchRequest(sortDescriptors: [SortDescriptor(\.name)]) var petsList: FetchedResults <Pet>
     
-    
+    @State private var scale = 1.0
     
     var body: some View {
-        
-        
         ZStack {
             Color("BackgroundColor")
                 .ignoresSafeArea()
+            
             
             ScrollView {
                 VStack(alignment: .leading, spacing: 20) {
@@ -41,17 +38,18 @@ struct MainScreenView: View {
                             .padding(.horizontal)
                     } else {
                         LazyVStack {
-                            ForEach(petsList) {pet in
-                                
-                                NavigationLink(destination: AnimalDetailsView()) {
+                            ForEach(petsList, id: \.self) {pet in
+                                NavigationLink(destination: AnimalDetailsView(pet: pet)) {
                                     HStack {
                                         AnimalPictureView(animalPicture: pet.animalPicture)
                                         AnimalListView(petName: pet.name, animalKind: pet.animalKind)
                                     }
                                     
+                                    
                                 }
+                                .transition(.opacity.combined(with: .move(edge: .trailing)))
                                 
-                            }
+                            }                            
                         }
                         .padding()
                         .frame(width: UIScreen.main.bounds.width - 40)
@@ -65,25 +63,20 @@ struct MainScreenView: View {
                         .font(.title2.bold())
                         .foregroundColor(Color("TitleFontColor"))
                         .padding(.horizontal)
-                    
-                    
+                                        
                     if vetsList.isEmpty {
                         Text(NSLocalizedString("NoVets", comment: ""))
                             .foregroundColor(.gray)
                             .font(.subheadline)
                             .padding(.horizontal)
                     }else{
-                        
-                        
-                        
                         LazyVStack{
-                            ForEach(vetsList) {vet in
+                            ForEach(vetsList, id: \.self) {vet in
                                 VetListView(
                                     vetName: vet.name,
                                     telephoneNumber: vet.telephoneNumber,
                                     address: vet.address
-                                )                                
-                                
+                                )
                             }
                         }
                         .padding()
@@ -107,11 +100,15 @@ struct MainScreenView: View {
                     }
                     .padding(.horizontal, 30)
                     .padding(.top, 20)
+                    .scaleEffect(scale)
+                    .animation(.linear(duration: 2), value: scale)
                 }
                 .padding(.top, 20)
             }
         }
     }
+    
+        
 }
 
 /*#Preview {

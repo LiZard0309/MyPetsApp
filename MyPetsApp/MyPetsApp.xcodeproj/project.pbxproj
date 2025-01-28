@@ -12,6 +12,13 @@
 		5CF46F432D431121003C4708 /* AnimalListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF46F422D431121003C4708 /* AnimalListView.swift */; };
 		5CF46F452D43112A003C4708 /* AnimalDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF46F442D43112A003C4708 /* AnimalDetailsView.swift */; };
 		5CF46F482D43113E003C4708 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF46F462D43113E003C4708 /* PersistenceController.swift */; };
+		5CF46F4C2D46FF35003C4708 /* MedicationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF46F4B2D46FF35003C4708 /* MedicationData.swift */; };
+		5CF46F4F2D4710CF003C4708 /* AudioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF46F4E2D4710CF003C4708 /* AudioModel.swift */; };
+		5CF46F512D47154D003C4708 /* PetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF46F502D47154D003C4708 /* PetViewModel.swift */; };
+		5CF46F562D485064003C4708 /* cat-purring.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5CF46F552D485064003C4708 /* cat-purring.mp3 */; };
+		5CF46F582D48507E003C4708 /* cat-meow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5CF46F572D48507E003C4708 /* cat-meow.mp3 */; };
+		5CF46F5B2D4850AE003C4708 /* rabbit-squeaks.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5CF46F5A2D4850AE003C4708 /* rabbit-squeaks.mp3 */; };
+		5CF46F622D485BED003C4708 /* DetailsImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF46F612D485BED003C4708 /* DetailsImageView.swift */; };
 		CE67B8C62D43FC08002BB5DF /* VetListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE67B8C52D43FC08002BB5DF /* VetListView.swift */; };
 		CE67B8C82D43FFD0002BB5DF /* VetData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE67B8C72D43FFD0002BB5DF /* VetData.swift */; };
 		CE73C4202D41573D0083A50F /* AddPetFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73C41F2D41573D0083A50F /* AddPetFormView.swift */; };
@@ -30,6 +37,13 @@
 		5CF46F422D431121003C4708 /* AnimalListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalListView.swift; sourceTree = "<group>"; };
 		5CF46F442D43112A003C4708 /* AnimalDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalDetailsView.swift; sourceTree = "<group>"; };
 		5CF46F462D43113E003C4708 /* PersistenceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
+		5CF46F4B2D46FF35003C4708 /* MedicationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationData.swift; sourceTree = "<group>"; };
+		5CF46F4E2D4710CF003C4708 /* AudioModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioModel.swift; sourceTree = "<group>"; };
+		5CF46F502D47154D003C4708 /* PetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetViewModel.swift; sourceTree = "<group>"; };
+		5CF46F552D485064003C4708 /* cat-purring.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "cat-purring.mp3"; sourceTree = "<group>"; };
+		5CF46F572D48507E003C4708 /* cat-meow.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "cat-meow.mp3"; sourceTree = "<group>"; };
+		5CF46F5A2D4850AE003C4708 /* rabbit-squeaks.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "rabbit-squeaks.mp3"; sourceTree = "<group>"; };
+		5CF46F612D485BED003C4708 /* DetailsImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsImageView.swift; sourceTree = "<group>"; };
 		CE67B8C52D43FC08002BB5DF /* VetListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VetListView.swift; sourceTree = "<group>"; };
 		CE67B8C72D43FFD0002BB5DF /* VetData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VetData.swift; sourceTree = "<group>"; };
 		CE73C41F2D41573D0083A50F /* AddPetFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPetFormView.swift; sourceTree = "<group>"; };
@@ -54,6 +68,58 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5CF46F4A2D46FF1E003C4708 /* medication */ = {
+			isa = PBXGroup;
+			children = (
+				5CF46F4B2D46FF35003C4708 /* MedicationData.swift */,
+			);
+			path = medication;
+			sourceTree = "<group>";
+		};
+		5CF46F4D2D4710BD003C4708 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				5CF46F4E2D4710CF003C4708 /* AudioModel.swift */,
+			);
+			path = util;
+			sourceTree = "<group>";
+		};
+		5CF46F592D485099003C4708 /* audio */ = {
+			isa = PBXGroup;
+			children = (
+				5CF46F5A2D4850AE003C4708 /* rabbit-squeaks.mp3 */,
+				5CF46F552D485064003C4708 /* cat-purring.mp3 */,
+				5CF46F572D48507E003C4708 /* cat-meow.mp3 */,
+			);
+			path = audio;
+			sourceTree = "<group>";
+		};
+		5CF46F5C2D485B80003C4708 /* list */ = {
+			isa = PBXGroup;
+			children = (
+				5CF46F422D431121003C4708 /* AnimalListView.swift */,
+				5C35752F2D4064A300A11C2C /* AnimalPictureView.swift */,
+			);
+			path = list;
+			sourceTree = "<group>";
+		};
+		5CF46F5D2D485BA2003C4708 /* details */ = {
+			isa = PBXGroup;
+			children = (
+				5CF46F442D43112A003C4708 /* AnimalDetailsView.swift */,
+				5CF46F612D485BED003C4708 /* DetailsImageView.swift */,
+			);
+			path = details;
+			sourceTree = "<group>";
+		};
+		5CF46F5E2D485BBF003C4708 /* form */ = {
+			isa = PBXGroup;
+			children = (
+				CE73C41F2D41573D0083A50F /* AddPetFormView.swift */,
+			);
+			path = form;
+			sourceTree = "<group>";
+		};
 		CE73C4382D415F130083A50F /* data */ = {
 			isa = PBXGroup;
 			children = (
@@ -66,10 +132,10 @@
 		CE73C4392D415F420083A50F /* pets */ = {
 			isa = PBXGroup;
 			children = (
-				CE73C41F2D41573D0083A50F /* AddPetFormView.swift */,
-				5CF46F442D43112A003C4708 /* AnimalDetailsView.swift */,
-				5CF46F422D431121003C4708 /* AnimalListView.swift */,
-				5C35752F2D4064A300A11C2C /* AnimalPictureView.swift */,
+				5CF46F5E2D485BBF003C4708 /* form */,
+				5CF46F5D2D485BA2003C4708 /* details */,
+				5CF46F5C2D485B80003C4708 /* list */,
+				5CF46F502D47154D003C4708 /* PetViewModel.swift */,
 			);
 			path = pets;
 			sourceTree = "<group>";
@@ -102,6 +168,9 @@
 		CEA77F622D3EAA8700A67818 /* MyPetsApp */ = {
 			isa = PBXGroup;
 			children = (
+				5CF46F592D485099003C4708 /* audio */,
+				5CF46F4D2D4710BD003C4708 /* util */,
+				5CF46F4A2D46FF1E003C4708 /* medication */,
 				CE73C43A2D415F630083A50F /* vets */,
 				CE73C4392D415F420083A50F /* pets */,
 				CE73C4382D415F130083A50F /* data */,
@@ -185,8 +254,11 @@
 			files = (
 				CE73C4402D416A960083A50F /* Localizable.strings in Resources */,
 				CEA77F6B2D3EAA8800A67818 /* Preview Assets.xcassets in Resources */,
+				5CF46F562D485064003C4708 /* cat-purring.mp3 in Resources */,
 				CE73C4312D415C9E0083A50F /* Localizable.strings in Resources */,
+				5CF46F5B2D4850AE003C4708 /* rabbit-squeaks.mp3 in Resources */,
 				CEA77F682D3EAA8800A67818 /* Assets.xcassets in Resources */,
+				5CF46F582D48507E003C4708 /* cat-meow.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,13 +272,17 @@
 				5CF46F482D43113E003C4708 /* PersistenceController.swift in Sources */,
 				CE67B8C82D43FFD0002BB5DF /* VetData.swift in Sources */,
 				5CF46F432D431121003C4708 /* AnimalListView.swift in Sources */,
+				5CF46F4F2D4710CF003C4708 /* AudioModel.swift in Sources */,
 				CE73C4202D41573D0083A50F /* AddPetFormView.swift in Sources */,
 				5C3575302D4064A300A11C2C /* AnimalPictureView.swift in Sources */,
 				CEA77F662D3EAA8700A67818 /* ContentView.swift in Sources */,
 				CEA77F642D3EAA8700A67818 /* MyPetsAppApp.swift in Sources */,
 				CE67B8C62D43FC08002BB5DF /* VetListView.swift in Sources */,
 				5CF46F452D43112A003C4708 /* AnimalDetailsView.swift in Sources */,
+				5CF46F512D47154D003C4708 /* PetViewModel.swift in Sources */,
 				5C3575322D40801100A11C2C /* MainScreenView.swift in Sources */,
+				5CF46F622D485BED003C4708 /* DetailsImageView.swift in Sources */,
+				5CF46F4C2D46FF35003C4708 /* MedicationData.swift in Sources */,
 				CE73C43D2D41610A0083A50F /* PetsModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -357,6 +433,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"MyPetsApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MyPetsApp/Info.plist;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "\"The app needs access to the microphone for audio recording and playback.\"";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -385,6 +463,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"MyPetsApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MyPetsApp/Info.plist;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "\"The app needs access to the microphone for audio recording and playback.\"";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

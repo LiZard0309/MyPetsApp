@@ -17,7 +17,7 @@ struct AnimalPictureView: View  {
            let uiImage = UIImage(data: imageData) {
             Image(uiImage: uiImage)
                 .resizable()
-                .frame(width: 50, height: 50)
+                .frame(width: 70, height: 50)
                 .clipShape(Circle())
         } else {
             Image("PawPrint")
@@ -28,8 +28,8 @@ struct AnimalPictureView: View  {
     }
 }
 
-/*struct AnimalPictureView_Previews: PreviewProvider {
+struct AnimalPictureView_Previews: PreviewProvider {
     static var previews: some View {
-        AnimalPictureView(pet: <#T##Pet#>)
+        AnimalPictureView()
     }
-}*/
+}
