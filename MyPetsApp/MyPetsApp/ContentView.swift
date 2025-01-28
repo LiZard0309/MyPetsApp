@@ -7,9 +7,12 @@
 
 import SwiftUI
 import CoreData
+import UserNotifications
 
 struct ContentView: View {
     @State private var scale = 1.0
+    
+    @StateObject var delegate = NotificationDelegate()
     
     var body: some View {
         NavigationView(){
@@ -34,10 +37,13 @@ struct ContentView: View {
                                 .font(.system(size: 18, weight: .bold))
                                 .foregroundColor(.gray)
                                 .padding()
+                            
+                            
                                 
                         }
                         .scaleEffect(scale)
                         .animation(.linear(duration: 2), value: scale)
+                
                     
                 }
                 
@@ -47,11 +53,25 @@ struct ContentView: View {
                 
             }
             
-            
-            
+        }
+        .onAppear {
+            requestForAuthorization()
         }
         
     }
+    
+    func requestForAuthorization() {
+        UNUserNotificationCenter.current().delegate = delegate
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
+            if success {
+                print("Authorization granted")
+            } else if let error = error {
+                print("Error: \(error.localizedDescription)")
+            }
+        }
+    }
+    
+    
 }
 
 struct ContentView_Previews: PreviewProvider {

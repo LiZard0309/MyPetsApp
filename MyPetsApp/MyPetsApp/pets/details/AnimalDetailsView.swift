@@ -99,26 +99,6 @@ struct AnimalDetailsView: View {
                                 
                             }
                             
-                            /*if let soundPath = pet.animalSound, let soundURL = URL(string: soundPath), FileManager.default.fileExists(atPath: soundURL.path) {
-                                
-                                Button {
-                                    audioModel.startPlaying(soundURL: soundURL)
-                                } label: {
-                                    HStack {
-                                        Image(systemName: "play.circle")
-                                            .foregroundColor(.black)
-                                        Text(NSLocalizedString("PlaySound", comment: ""))
-                                            .foregroundColor(.black)
-                                    }
-                                }
-                                .controlSize(.regular)
-                                
-                            } else {
-                                Text(NSLocalizedString("NoSoundAvailable", comment: ""))
-                                    .foregroundColor(.gray)
-                                    .padding(.top, 20)
-                                
-                            }*/
                         }
                         
                     }
@@ -154,13 +134,13 @@ struct AnimalDetailsView: View {
                     
                    
                     Button(NSLocalizedString("TestNotification", comment: "")){
-                        testNotification()
+                        setupCheckupTestNotification()
                     }
                     .padding()
                     .font(.system(size: 18, weight: .bold))
                     .frame(width: UIScreen.main.bounds.width - 40)
                     .foregroundColor(Color("BackgroundColor"))
-                    .background(Color.gray)
+                    .background(Color("SecondaryButton"))
                     .clipShape(Capsule())
                     .padding(.horizontal)
                 }
@@ -173,11 +153,27 @@ struct AnimalDetailsView: View {
         petViewModel.deletePet(_petName: pet.name ?? "")
     }
     
-    func testNotification(){
-        //TODO implement function
+    func setupCheckupTestNotification(){
+        let content = UNMutableNotificationContent()
+        content.title = NSLocalizedString("CheckupReminder", comment: "")
+        content.body = String(format: NSLocalizedString("CheckupText", comment: ""), pet.name ?? NSLocalizedString("Unknown", comment: ""))
+        content.categoryIdentifier = "CHECKUP_DATE_TEST"
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        
+        let notificationIdentifier = "checkupTestNotification-\(String(describing: pet.name))"
+        
+        let request = UNNotificationRequest(identifier: notificationIdentifier, content: content, trigger: trigger)
+        
+        let acceptAction = UNNotificationAction(identifier: "ACCEPT_ACTION", title: NSLocalizedString("Ok", comment: ""), options: [])
+        
+        let declineAction = UNNotificationAction(identifier: "DECLINE_ACTION", title: NSLocalizedString("Cancel", comment: ""), options: [.destructive])
+        
+        let checkupCategory = UNNotificationCategory(identifier: "CHECKUP_DATE", actions: [acceptAction, declineAction], intentIdentifiers: [], options: .customDismissAction)
+        
+        UNUserNotificationCenter.current().add(request)
     }
-    
-    
+ 
 }
 
 

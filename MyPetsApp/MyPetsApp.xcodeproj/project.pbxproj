@@ -19,6 +19,7 @@
 		5CF46F582D48507E003C4708 /* cat-meow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5CF46F572D48507E003C4708 /* cat-meow.mp3 */; };
 		5CF46F5B2D4850AE003C4708 /* rabbit-squeaks.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5CF46F5A2D4850AE003C4708 /* rabbit-squeaks.mp3 */; };
 		5CF46F622D485BED003C4708 /* DetailsImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF46F612D485BED003C4708 /* DetailsImageView.swift */; };
+		5CF46F6A2D498C26003C4708 /* NotificationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF46F692D498C26003C4708 /* NotificationDelegate.swift */; };
 		CE67B8C62D43FC08002BB5DF /* VetListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE67B8C52D43FC08002BB5DF /* VetListView.swift */; };
 		CE67B8C82D43FFD0002BB5DF /* VetData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE67B8C72D43FFD0002BB5DF /* VetData.swift */; };
 		CE73C4202D41573D0083A50F /* AddPetFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73C41F2D41573D0083A50F /* AddPetFormView.swift */; };
@@ -44,6 +45,7 @@
 		5CF46F572D48507E003C4708 /* cat-meow.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "cat-meow.mp3"; sourceTree = "<group>"; };
 		5CF46F5A2D4850AE003C4708 /* rabbit-squeaks.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "rabbit-squeaks.mp3"; sourceTree = "<group>"; };
 		5CF46F612D485BED003C4708 /* DetailsImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsImageView.swift; sourceTree = "<group>"; };
+		5CF46F692D498C26003C4708 /* NotificationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationDelegate.swift; sourceTree = "<group>"; };
 		CE67B8C52D43FC08002BB5DF /* VetListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VetListView.swift; sourceTree = "<group>"; };
 		CE67B8C72D43FFD0002BB5DF /* VetData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VetData.swift; sourceTree = "<group>"; };
 		CE73C41F2D41573D0083A50F /* AddPetFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPetFormView.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				5CF46F4E2D4710CF003C4708 /* AudioModel.swift */,
+				5CF46F692D498C26003C4708 /* NotificationDelegate.swift */,
 			);
 			path = util;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				CE73C4202D41573D0083A50F /* AddPetFormView.swift in Sources */,
 				5C3575302D4064A300A11C2C /* AnimalPictureView.swift in Sources */,
 				CEA77F662D3EAA8700A67818 /* ContentView.swift in Sources */,
+				5CF46F6A2D498C26003C4708 /* NotificationDelegate.swift in Sources */,
 				CEA77F642D3EAA8700A67818 /* MyPetsAppApp.swift in Sources */,
 				CE67B8C62D43FC08002BB5DF /* VetListView.swift in Sources */,
 				5CF46F452D43112A003C4708 /* AnimalDetailsView.swift in Sources */,

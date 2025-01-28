@@ -54,6 +54,10 @@
 //PETVIEWMODEL
 "EuropShorthair" = "Europäische Kurzhaarkatze";
 "DwarfRabbit" = "Zwergkaninchen";
+"CheckupReminder" = "Erinnerung: Bevorstehende Kontrolle";
+"CheckupText" = "%@ hat heute einen Kontrolltermin";
+"Ok" = "Okay";
+"Unknown" = "Unbekannt";
 
 //ANIMALDETAILSVIEW
 "AnimalDetails" = "Detaillierte Tierinfo";

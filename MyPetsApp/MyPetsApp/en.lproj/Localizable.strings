@@ -54,6 +54,10 @@
 //PETVIEWMODEL
 "EuropShorthair" = "European shorthair";
 "DwarfRabbit" = "Dwarf rabbit";
+"CheckupReminder" = "Reminder: Next checkup";
+"CheckupText" = "%@ has a checkup today!";
+"Ok" = "Okay";
+"Unknown" = "Unknown";
 
 //ANIMALDETAILSVIEW
 "AnimalDetails" = "Pet details";

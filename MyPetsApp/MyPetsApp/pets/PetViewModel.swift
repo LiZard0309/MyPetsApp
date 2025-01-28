@@ -58,6 +58,7 @@ class PetViewModel: ObservableObject {
         newPet.vet = vet
         newPet.medication = medication
         
+        setupNextCheckupNotification(for: petName, on: nextCheckup)
         
         do {
             try managedObjectContext.save()
@@ -86,8 +87,6 @@ class PetViewModel: ObservableObject {
         } catch {
             print ("Error deleting pets: \(error)")
         }
-        
-        
     }
     
     func preloadPets(){
@@ -112,20 +111,6 @@ class PetViewModel: ObservableObject {
             print("Error loading image data from assets")
             return
         }
-        
-        //PRELOAD PET SOUNDS
-        /*guard let soundURLPurring = Bundle.main.url(forResource: "cat-purring", withExtension: "mp3") else {
-            fatalError("cat-purring.mp3 not found in bundle")
-        }
-        
-        guard let soundURLMeowing = Bundle.main.url(forResource: "cat-meow", withExtension: "mp3") else {
-            fatalError("cat-meow.mp3 not found in bundle")
-        }
-        
-        guard let soundURLBunny = Bundle.main.url(forResource: "rabbit-squeaks", withExtension: "mp3") else {
-            fatalError("rabbit-squeaks.mp3 not found in bundle")
-        }*/
-        
         
         
         //PRELOAD PET VETS
@@ -232,5 +217,29 @@ class PetViewModel: ObservableObject {
         } catch {
             print ("Error initializing Pet data: \(error)")
         }
+    }
+    
+    func setupNextCheckupNotification(for petName: String, on checkupDate: Date) {
+        let content = UNMutableNotificationContent()
+        content.title = NSLocalizedString("CheckupReminder", comment: "")
+        content.body = String(format: NSLocalizedString("CheckupText", comment: ""), petName)
+        content.categoryIdentifier = "CHECKUP_DATE"
+        
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([.year, .month, .day, .hour, .minute], from: checkupDate)
+        
+        let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: false)
+        
+        let notificationIdentifier = "checkupNotification-\(petName)"
+        
+        let request = UNNotificationRequest(identifier: notificationIdentifier, content: content, trigger: trigger)
+        
+        let acceptAction = UNNotificationAction(identifier: "ACCEPT_ACTION", title: NSLocalizedString("Ok", comment: ""), options: [])
+        
+        let declineAction = UNNotificationAction(identifier: "DECLINE_ACTION", title: NSLocalizedString("Cancel", comment: ""), options: [.destructive])
+        
+        let checkupCategory = UNNotificationCategory(identifier: "CHECKUP_DATE", actions: [acceptAction, declineAction], intentIdentifiers: [], options: .customDismissAction)
+        
+        UNUserNotificationCenter.current().add(request)
     }
 }
