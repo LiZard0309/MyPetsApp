@@ -46,6 +46,7 @@ class PetViewModel: ObservableObject {
     )
     {
        let newPet = Pet(context: managedObjectContext)
+        newPet.id = UUID()
         newPet.name = petName
         newPet.animalKind = petKind
         newPet.age = petAge
@@ -62,7 +63,7 @@ class PetViewModel: ObservableObject {
             try managedObjectContext.save()
             fetchPets()
             print("New Pet \(petName) added successfully")
-            print("Animal sound URL saved: \(animalSound)")
+            print("Saved sound path: \(newPet.animalSound ?? "No path saved")")
         } catch {
             print("Error saving pet: \(error)")
         }
@@ -113,7 +114,7 @@ class PetViewModel: ObservableObject {
         }
         
         //PRELOAD PET SOUNDS
-        guard let soundURLPurring = Bundle.main.url(forResource: "cat-purring", withExtension: "mp3") else {
+        /*guard let soundURLPurring = Bundle.main.url(forResource: "cat-purring", withExtension: "mp3") else {
             fatalError("cat-purring.mp3 not found in bundle")
         }
         
@@ -123,7 +124,9 @@ class PetViewModel: ObservableObject {
         
         guard let soundURLBunny = Bundle.main.url(forResource: "rabbit-squeaks", withExtension: "mp3") else {
             fatalError("rabbit-squeaks.mp3 not found in bundle")
-        }
+        }*/
+        
+        
         
         //PRELOAD PET VETS
         let vetFetchRequest = NSFetchRequest<Vet>(entityName: "Vet")
@@ -197,7 +200,7 @@ class PetViewModel: ObservableObject {
                     getsMedication: true,
                     medication: medicationWillow,
                     animalImage: imageDataWillow,
-                    animalSound: soundURLPurring.absoluteString
+                    animalSound: "cat-purring.mp3"
                 )
                 
                 addPet(
@@ -210,7 +213,7 @@ class PetViewModel: ObservableObject {
                     getsMedication: true,
                     medication: medicationWesley,
                     animalImage: imageDataWesley,
-                    animalSound: soundURLMeowing.absoluteString
+                    animalSound: "cat-meow.mp3"
                 )
                 
                 addPet(
@@ -223,7 +226,7 @@ class PetViewModel: ObservableObject {
                     getsMedication: true,
                     medication: medicationPoirot,
                     animalImage: imageDataPoirot,
-                    animalSound: soundURLBunny.absoluteString
+                    animalSound: "rabbit-squeaks.mp3"
                 )
             }
         } catch {

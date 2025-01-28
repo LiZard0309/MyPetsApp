@@ -77,7 +77,8 @@ struct AnimalDetailsView: View {
                         
                         Section(header: Text(NSLocalizedString("PlaySound", comment: ""))){
                             
-                            if let soundPath = pet.animalSound, let soundURL = URL(string: soundPath), FileManager.default.fileExists(atPath: soundURL.path) {
+                            if let soundFilename = pet.animalSound,
+                               let soundURL = Bundle.main.url(forResource: soundFilename, withExtension: nil) {
                                 
                                 Button {
                                     audioModel.startPlaying(soundURL: soundURL)
@@ -97,6 +98,27 @@ struct AnimalDetailsView: View {
                                     .padding(.top, 20)
                                 
                             }
+                            
+                            /*if let soundPath = pet.animalSound, let soundURL = URL(string: soundPath), FileManager.default.fileExists(atPath: soundURL.path) {
+                                
+                                Button {
+                                    audioModel.startPlaying(soundURL: soundURL)
+                                } label: {
+                                    HStack {
+                                        Image(systemName: "play.circle")
+                                            .foregroundColor(.black)
+                                        Text(NSLocalizedString("PlaySound", comment: ""))
+                                            .foregroundColor(.black)
+                                    }
+                                }
+                                .controlSize(.regular)
+                                
+                            } else {
+                                Text(NSLocalizedString("NoSoundAvailable", comment: ""))
+                                    .foregroundColor(.gray)
+                                    .padding(.top, 20)
+                                
+                            }*/
                         }
                         
                     }

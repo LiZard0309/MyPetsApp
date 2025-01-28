@@ -38,7 +38,7 @@ struct MainScreenView: View {
                             .padding(.horizontal)
                     } else {
                         LazyVStack {
-                            ForEach(petsList, id: \.self) {pet in
+                            ForEach(petsList, id: \.id) {pet in
                                 NavigationLink(destination: AnimalDetailsView(pet: pet)) {
                                     HStack {
                                         AnimalPictureView(animalPicture: pet.animalPicture)

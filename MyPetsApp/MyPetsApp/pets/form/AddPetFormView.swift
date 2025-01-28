@@ -82,9 +82,9 @@ struct AddPetFormView: View {
                     TextField(NSLocalizedString("PetBreed", comment: ""), text: $petBreed)
                     
                     Picker(NSLocalizedString("PetVet", comment: ""), selection: $vetSelection){
-                        ForEach(vetList, id: \.self) { vet in
+                        ForEach(vetList, id: \.id) { vet in
                             Text(vet.name ?? NSLocalizedString("UnknownVet", comment: ""))
-                                .tag(vet as Vet)
+                                .tag(vet as Vet?)
                         }
                     }
                     
@@ -96,9 +96,9 @@ struct AddPetFormView: View {
                     
                     if getsMedication {
                         Picker(NSLocalizedString("Meds", comment: ""), selection: $medSelection){
-                            ForEach(medList, id: \.self) { med in
+                            ForEach(medList, id: \.id) { med in
                                 Text(med.name ?? NSLocalizedString("UnknownMeds", comment: ""))
-                                    .tag(med as Medication)
+                                    .tag(med as Medication?)
                             }
                         }
                     }

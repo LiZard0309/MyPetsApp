@@ -26,21 +26,21 @@ class AudioModel: NSObject, ObservableObject, AVAudioRecorderDelegate {
             print("Error setting up audio session")
         }
         
-        let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
         
         soundFileURL = path.appendingPathComponent("recording.m4a")
         
         print(path)
         
-        let audioSettings: [String: Any] = [
-            AVFormatIDKey: kAudioFormatMPEG4AAC,
+        let audioSettings = [
+            AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
             AVSampleRateKey: 12000,
             AVNumberOfChannelsKey: 1,
             AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue
         ]
         
         do {
-            audioRecorder = try AVAudioRecorder(url: soundFileURL!, settings: audioSettings)
+            audioRecorder = try AVAudioRecorder(url: self.soundFileURL!, settings: audioSettings)
             audioRecorder?.delegate = self
             
             audioRecorder?.prepareToRecord()

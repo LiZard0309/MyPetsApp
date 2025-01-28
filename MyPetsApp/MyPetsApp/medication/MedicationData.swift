@@ -9,6 +9,12 @@ import Foundation
 import CoreData
 
 struct MedicationData {
+    struct MedicationModel: Identifiable {
+        var id: UUID = UUID()
+        var name: String
+        var intakeTime: String
+    }
+    
     static func createInitialMedicationData(context: NSManagedObjectContext) {
         
         let fetchRequest = NSFetchRequest<Medication>(entityName: "Medication")
@@ -21,17 +27,17 @@ struct MedicationData {
                 //if there is no initial data in the database, add initial vets
                 
                 let medications = [
-                    ("Famotidine", NSLocalizedString("morning", comment: "")),
-                    ("Doxepin", NSLocalizedString("evening", comment: "")),
-                    ("Gabapentin", NSLocalizedString("evening", comment: "")),
-                    ("Drontal Feline", NSLocalizedString("morning", comment: "")),
-                    ("RodiCare", NSLocalizedString("evening", comment: ""))
+                    MedicationModel(name: "Famotidine", intakeTime: NSLocalizedString("morning", comment: "")),
+                    MedicationModel(name: "Doxepin", intakeTime: NSLocalizedString("evening", comment: "")),
+                    MedicationModel(name: "Gabapentin", intakeTime: NSLocalizedString("evening", comment: "")),
+                    MedicationModel(name: "Drontal Feline", intakeTime: NSLocalizedString("morning", comment: "")),
+                    MedicationModel(name: "RodiCare", intakeTime: NSLocalizedString("evening", comment: ""))
                 ]
                 
-                for medicationData in medications {
+                for medicationModel in medications {
                     let medication = Medication(context: context)
-                    medication.name = medicationData.0
-                    medication.intakeTime = medicationData.1
+                    medication.name = medicationModel.name
+                    medication.intakeTime = medicationModel.intakeTime
                 }
                 
                 try context.save()

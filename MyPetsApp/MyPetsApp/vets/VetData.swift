@@ -9,6 +9,13 @@ import Foundation
 import CoreData
 
 struct VetData {
+    struct VetModel: Identifiable {
+        var id: UUID = UUID()
+        var name: String
+        var address: String
+        var telephoneNumber: String
+    }
+    
     static func createInitialVetData(context: NSManagedObjectContext) {
         //check if vets already exist in the database
         
@@ -22,16 +29,16 @@ struct VetData {
                 //if there is no initial data in the database, add initial vets
                 
                 let vets = [
-                    ("Dr.in Kitty Purrger", "Whisker-Straße 123, Wien", "0664/12342234"),
-                    ("Dr. Wolf Barker", "Bark-Platz 1, Wiener Neustadt", "0660/1556789"),
-                    ("Dr.in Bunny Hops", "Möhrenstraße 3, Wien", "0676/765974")
+                    VetModel(name: "Dr.in Kitty Purrger", address: "Whisker-Straße 123, Wien", telephoneNumber: "0664/12342234"),
+                    VetModel(name: "Dr. Wolf Barker", address: "Bark-Platz 1, Wiener Neustadt", telephoneNumber: "0660/1556789"),
+                    VetModel(name: "Dr.in Bunny Hops", address: "Möhrenstraße 3, Wien", telephoneNumber: "0676/765974")
                 ]
                 
-                for vetData in vets {
+                for vetModel in vets {
                     let vet = Vet(context: context)
-                    vet.name = vetData.0
-                    vet.address = vetData.1
-                    vet.telephoneNumber = vetData.2
+                    vet.name = vetModel.name
+                    vet.address = vetModel.address
+                    vet.telephoneNumber = vetModel.telephoneNumber
                 }
                 
                 try context.save()
